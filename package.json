@@ -33,7 +33,7 @@
     "dotenv": "^16.6.1",
     "ethers": "^6.17.0",
     "graphql": "^16.15.0",
-    "graphql-request": "5.2.0",
+    "graphql-request": "5.1.0",
     "lz4-napi": "^2.10.0",
     "p-limit": "^3.1.0",
     "pg": "^8.23.1",
