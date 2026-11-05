@@ -2,29 +2,29 @@ name: test-adapter
 on: [pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - id: file_changes
-        uses: trilom/file-changes-action@ce38c8ce2459ca3c303415eec8cb0409857b4272
+        uses: trilom/file-changes-action@a6ca26c14274c33b15e6499323aac178af06ad4b # v1.2.4
         with:
           output: 'json'
           fileOutput: 'json'
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6.1.1
         name: Install pnpm
         with:
           version: 10
           run_install: false
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7.1.0
         with:
-          node-version: 20
+          node-version: "26.13.0"
           cache: 'pnpm'
 
       - name: Install dependencies
