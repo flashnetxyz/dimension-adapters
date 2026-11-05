@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-upload:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
